@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	
+
+	<description>Wiring the dependencies for the Facility Management System.</description>
+
+	<context:component-scan base-package="Facility" />
+	
+	<util:map id="FacilitiesMap" map-class="java.util.HashMap">
+    	<entry key="5678" value="123 Applewood Lane"/>
+	</util:map>
+	
+	<bean id="FacilityInfo" class="Facility.FacilityInfo" scope="prototype">
+		<property name="Address">
+			<value>"123 Applewood Lane"</value>
+		</property>
+		<property name="FacilityID" >
+			<value>5678</value>
+		</property>
+		<property name="Name" >
+			<value>"Ridgewood Condominiums"</value>
+		</property>
+	</bean>
+	
+	<bean id="FacilityGroup" class="Facility.FacilityGroup" scope="prototype">
+		<property name="GroupID">
+			<value>30</value>
+		</property>
+		<property name="FacilitiesList" ref="FacilitiesMap"/>
+		<property name="GroupCapacity">
+			<value>0</value>
+		</property>
+	</bean>
+	
+	<bean id="FacilityManager" class="Facility.FacilityManager" scope="prototype">
+		<property name="ManagerName">
+			<value>"Tom Dale"</value>
+		</property>
+		<property name="ManagerAddress" >
+			<value>"Goldenrod Lane"</value>
+		</property>
+		<property name="ManagerID" >
+			<value>37860</value>
+		</property>
+	</bean>
+	
+	
+</beans>
