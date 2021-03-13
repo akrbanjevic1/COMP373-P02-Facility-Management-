@@ -49,13 +49,13 @@ public class Main {
 		TestManager.showAssignedGroup();
 		TestManager.getManagerDetails();
 		
-		//Rental stuff is the next thing to be configured with Spring. 
 		//Test Renter Object Here
 		System.out.println("-----------------------------------------Testing of Rent related Objects starts here---------------------------------------");
-		Renter testRenter = new Renter();
-		testRenter.setRenterID(93);
-		testRenter.setRenterAddress("1378 Pearl Ave, London UK");
-		testRenter.setRenterName("Tom Smith");
+		//Renter testRenter = new Renter();
+		Renter testRenter = (Renter) context.getBean("Renter");
+		//testRenter.setRenterID(93);
+		//testRenter.setRenterAddress("1378 Pearl Ave, London UK");
+		//testRenter.setRenterName("Tom Smith");
 		int testRenterID = testRenter.getRenterID();
 		//Making another renter to test the Maximum function of RentInfo
 		Renter testRenter2 = new Renter();
@@ -65,11 +65,12 @@ public class Main {
 		int testRenterID2 = testRenter2.getRenterID();
 		
 		//Test RentInfo Object here
-		RentInfo testRentInfo = new RentInfo();
-		testRentInfo.setFacility(TestFacility);
+		RentInfo testRentInfo = (RentInfo) context.getBean("RentInfo");
+		//RentInfo testRentInfo = new RentInfo();
+		//testRentInfo.setFacility(TestFacility);
 		testRentInfo.setRenterList();
-		testRentInfo.setRentInfoID(1392);
-		testRentInfo.setRentMaximum(2);
+		//testRentInfo.setRentInfoID(1392);
+		//testRentInfo.setRentMaximum(2);
 		
 		testRentInfo.addRenter(testRenterID);
 		testRentInfo.addRenter(testRenterID2);
@@ -81,6 +82,7 @@ public class Main {
 		
 		System.out.println("-----------------------------------------Testing of Costs starts here---------------------------------------");
 		//Testing rental costs here.
+		//----------------------------------------------------------------- Next thing to configure with Spring
 		RentCharge testRentCharge = new RentCharge(testRenter);
 		testRentCharge.setCosts(1800);
 		testRentCharge.getCosts();

@@ -5,6 +5,10 @@ public class Renter {
 	private String renterName;
 	private int renterID;
 	
+	public Renter() {
+		
+	}
+	
 	public void setRenterID(int renterID) {
 		this.renterID = renterID;
 	}

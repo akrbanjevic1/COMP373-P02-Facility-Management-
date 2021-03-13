@@ -29,7 +29,7 @@ class RentInfoTest {
 		rentInfo = new RentInfo();
 		rentInfo.setRentInfoID(10);
 		rentInfo.setRentMaximum(2);
-		rentInfo.setFacility(facility);
+		rentInfo.setFacilityInfo(facility);
 		rentInfo.setRenterList();
 		rentInfo.addRenter(renter.getRenterID());
 		

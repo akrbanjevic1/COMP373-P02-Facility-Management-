@@ -15,6 +15,8 @@
     	<entry key="5678" value="123 Applewood Lane"/>
 	</util:map>
 	
+	
+	
 	<bean id="FacilityInfo" class="Facility.FacilityInfo" scope="prototype">
 		<property name="Address">
 			<value>"123 Applewood Lane"</value>
@@ -49,5 +51,25 @@
 		</property>
 	</bean>
 	
+	<bean id="Renter" class="Rent.Renter" scope="prototype">
+		<property name="renterName">
+			<value>Jacky Bollinger</value>
+		</property>
+		<property name="renterAddress">
+			<value>"12 Rentman Avenue"</value>
+		</property>
+		<property name="renterID" >
+			<value>101</value>
+		</property>
+	</bean>
 	
+	<bean id="RentInfo" class="Rent.RentInfo" scope="prototype">
+		<property name="rentInfoID">
+			<value>914678</value>
+		</property>
+		<property name="rentMaximum">
+			<value>3</value>
+		</property>
+		<property name="FacilityInfo" ref="FacilityInfo"/>
+	</bean>
 </beans>

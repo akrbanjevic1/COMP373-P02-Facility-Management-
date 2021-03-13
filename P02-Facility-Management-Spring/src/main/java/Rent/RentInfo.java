@@ -10,12 +10,15 @@ public class RentInfo {
 	private int rentMaximum; //this would be for the maximum amount of people allowed to rent the facility.
 	private ArrayList<Integer> tenantList;
 	
+	public RentInfo() {
+		
+	}
 	//Setters for instance variables
 	public void setRentInfoID(int ID) {
 		this.rentInfoID = ID;
 	}
 	
-	public void setFacility(FacilityInfo facility) {
+	public void setFacilityInfo(FacilityInfo facility) {
 		this.facilityInfo = facility;
 	}
 	
