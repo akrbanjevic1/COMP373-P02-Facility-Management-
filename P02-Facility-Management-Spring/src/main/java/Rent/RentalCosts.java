@@ -4,6 +4,10 @@ import Rent.Renter;
 public abstract class RentalCosts {
 	private Renter renter;
 	
+	public RentalCosts() {
+		
+	}
+	
 	public RentalCosts(Renter renter) {
 		this.renter = renter;
 	}

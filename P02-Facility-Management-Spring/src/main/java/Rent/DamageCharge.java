@@ -8,7 +8,19 @@ public class DamageCharge extends RentalCosts{
 		super(renter);
 		this.renter = renter;
 	}
-
+	
+	public DamageCharge() {
+		
+	}
+	
+	public void setDamageCharge(int cost) {
+		this.damageCharge = cost;
+	}
+	
+	public void setRenter(Renter renter) {
+		this.renter = renter;
+	}
+	
 	public void setCosts(int cost) {
 		// TODO Auto-generated method stub
 		this.damageCharge = cost;

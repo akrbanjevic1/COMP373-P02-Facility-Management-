@@ -8,12 +8,27 @@ public class RentCharge extends RentalCosts{
 		super(renter);
 		this.renter = renter;
 	}
+	
+	public RentCharge() {
+		
+	}
+	
+	public void setRenter(Renter renter) {
+		this.renter = renter;
+	}
+	
+	public void setRentCharge(int cost) {
+		this.rentCharge = cost;
+	}
 
 	public void setCosts(int cost) {
 		// TODO Auto-generated method stub
 		this.rentCharge = cost;
 	}
 
+	public Renter getRenter() {
+		return this.renter;
+	}
 	@Override
 	public void getCosts() {
 		// TODO Auto-generated method stub

@@ -16,7 +16,6 @@
 	</util:map>
 	
 	
-	
 	<bean id="FacilityInfo" class="Facility.FacilityInfo" scope="prototype">
 		<property name="Address">
 			<value>"123 Applewood Lane"</value>
@@ -72,4 +71,19 @@
 		</property>
 		<property name="FacilityInfo" ref="FacilityInfo"/>
 	</bean>
+	
+	<bean id="RentCharge" class="Rent.RentCharge" scope="prototype">
+		<property name="rentCharge">
+			<value>1400</value>
+		</property>
+		<property name="renter" ref="Renter"/>
+	</bean>
+
+	<bean id="DamageCharge" class="Rent.DamageCharge" scope="prototype">
+		<property name="damageCharge">
+			<value>300</value>
+		</property>
+		<property name="renter" ref="Renter"/>
+	</bean>
+	
 </beans>

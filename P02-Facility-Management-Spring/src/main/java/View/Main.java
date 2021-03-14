@@ -83,12 +83,16 @@ public class Main {
 		System.out.println("-----------------------------------------Testing of Costs starts here---------------------------------------");
 		//Testing rental costs here.
 		//----------------------------------------------------------------- Next thing to configure with Spring
-		RentCharge testRentCharge = new RentCharge(testRenter);
-		testRentCharge.setCosts(1800);
+		//RentCharge testRentCharge = new RentCharge(testRenter);
+		//testRentCharge.setCosts(1800);
+		
+		RentCharge testRentCharge = (RentCharge) context.getBean("RentCharge");
 		testRentCharge.getCosts();
 		
-		DamageCharge testDamageCharge = new DamageCharge(testRenter);
-		testDamageCharge.setCosts(4000);
+		//DamageCharge testDamageCharge = new DamageCharge(testRenter);
+		//testDamageCharge.setCosts(4000);
+		
+		DamageCharge testDamageCharge = (DamageCharge) context.getBean("DamageCharge");
 		testDamageCharge.getCosts();
 
 		System.out.println("-----------------------------------------Testing of Maintenance package starts here---------------------------------------");
