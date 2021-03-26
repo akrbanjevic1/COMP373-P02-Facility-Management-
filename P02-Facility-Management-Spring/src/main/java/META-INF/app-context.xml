@@ -12,7 +12,7 @@
 	<context:component-scan base-package="Facility" />
 	
 	<util:map id="FacilitiesMap" map-class="java.util.HashMap">
-    	<entry key="5678" value="123 Applewood Lane"/>
+    	<entry key="#{ FacilityInfo.FacilityID }" value="#{ FacilityInfo.Address }"/>
 	</util:map>
 	
 	
@@ -59,6 +59,18 @@
 		</property>
 		<property name="renterID" >
 			<value>101</value>
+		</property>
+	</bean>
+	
+	<bean id="Renter2" class="Rent.Renter" scope="prototype">
+		<property name="renterName">
+			<value>Bob Smith</value>
+		</property>
+		<property name="renterAddress">
+			<value>"098 I dont know Ave"</value>
+		</property>
+		<property name="renterID" >
+			<value>92</value>
 		</property>
 	</bean>
 	

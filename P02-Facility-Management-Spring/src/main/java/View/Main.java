@@ -57,12 +57,15 @@ public class Main {
 		//testRenter.setRenterAddress("1378 Pearl Ave, London UK");
 		//testRenter.setRenterName("Tom Smith");
 		int testRenterID = testRenter.getRenterID();
+		System.out.println("ID of first test renter is: " + testRenterID);
 		//Making another renter to test the Maximum function of RentInfo
-		Renter testRenter2 = new Renter();
-		testRenter2.setRenterID(92);
-		testRenter2.setRenterAddress("098 I dont know Ave");
-		testRenter2.setRenterName("Bob Smith");
+		Renter testRenter2 = (Renter) context.getBean("Renter2");
+		//Renter testRenter2 = new Renter();
+		//testRenter2.setRenterID(92);
+		//testRenter2.setRenterAddress("098 I dont know Ave");
+		//testRenter2.setRenterName("Bob Smith");
 		int testRenterID2 = testRenter2.getRenterID();
+		System.out.println("ID of second test renter is: "+testRenterID2);
 		
 		//Test RentInfo Object here
 		RentInfo testRentInfo = (RentInfo) context.getBean("RentInfo");
@@ -82,7 +85,6 @@ public class Main {
 		
 		System.out.println("-----------------------------------------Testing of Costs starts here---------------------------------------");
 		//Testing rental costs here.
-		//----------------------------------------------------------------- Next thing to configure with Spring
 		//RentCharge testRentCharge = new RentCharge(testRenter);
 		//testRentCharge.setCosts(1800);
 		
