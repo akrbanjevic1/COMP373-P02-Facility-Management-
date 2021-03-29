@@ -1,27 +1,29 @@
 package Maintenance;
 
-import Facility.FacilityInfo;
-
 import java.util.HashMap;
 
 public class InspectionInfo {
     private int InspectionInfoID;
+    private String FacilityName;
     private HashMap<Integer, String> InspectionsList;
 
-//    public InspectionInfo() {
-//    	// this.InspectionsList = new HashMap<Integer, String>(); OLD CODE
-//    }
+    /* OLD CODE
+     
+    public InspectionInfo() {
+    	this.InspectionsList = new HashMap<Integer, String>(); OLD CODE
+    }
     
-//    public InspectionInfo(int InfoID) {
-//    	this.InspectionInfoID = InfoID;
-//    	InspectionsList = new HashMap<Integer, String>();
-//    }
+    */
     
     public void setInspectionInfoID(int InfoID) { this.InspectionInfoID = InfoID; }
+    
+    public void setFacilityName(String name) { this.FacilityName = name; }
     
     public void setInspectionsList(HashMap<Integer, String> hashMap) { this.InspectionsList = hashMap; }
 
     public int getInspectionInfoID() { return this.InspectionInfoID; }
+    
+    public String getFacilityName() { return this.FacilityName; }
     
     public HashMap<Integer, String> getInspectionsList() { return this.InspectionsList; }
 

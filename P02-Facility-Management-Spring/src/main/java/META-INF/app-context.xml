@@ -98,16 +98,41 @@
 		<property name="renter" ref="Renter"/>
 	</bean>
 	
+	<bean id="InspectionInfo" class="Maintenance.InspectionInfo" scope="prototype">
+		<property name="InspectionInfoID">
+			<value>43</value>
+		</property>
+		<property name="FacilityName">
+			<value>Buffalo Grove</value>
+		</property>
+	</bean>
+	
+	<bean id="MaintenanceInfo" class="Maintenance.MaintenanceInfo" scope="prototype">
+		<property name="FacilityID">
+			<value>302</value>
+		</property>
+		<property name="FacilityName">
+			<value>Village Crossing</value>
+		</property>
+	</bean>
+	
+	<!--
+	
 	<util:map id="InspectionInfoMap" map-class="java.util.HashMap">
-    	<entry key="#{ InspectionInfo.InfoID }" value="#{ InspectionInfo.FacilityName }"/>
+    	<entry key="#{ InspectionInfo.InspectionInfoID }" value="#{ InspectionInfo.FacilityName }"/>
 	</util:map>
 	
 	<bean id="InspectionInfo" class="Maintenance.InspectionInfo" scope="prototype">
 		<property name="InspectionInfoID">
 			<value>43</value>
 		</property>
+		<property name="FacilityName">
+			<value>Village Crossing</value>
+		</property>
 		<property name="InspectionsList" ref="InspectionInfoMap"/>
 	</bean>
+	
+	-->
 	
 	<!--
 	

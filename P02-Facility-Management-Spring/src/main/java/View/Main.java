@@ -99,25 +99,19 @@ public class Main {
 
 		System.out.println("-----------------------------------------Testing of Maintenance starts here---------------------------------------");
 
-		// Testing maintenance related requests
-		// MaintenanceReq testMaintReq = new MaintenanceReq();
-
-		// testMaintReq.scheduleMaintenance(1, "04/21/2021", "Fixing broken smoke detectors.");
-		// testMaintReq.calcMaintenanceCost(2.3);
-		// testMaintReq.performMaintenance(1);
-
-		// Testing inspection related requests
-		// InspectionInfo testInspecInfo = new InspectionInfo();
-		
+		// Testing InspectionInfo
 		InspectionInfo testInspecInfo = (InspectionInfo) context.getBean("InspectionInfo");
-
-		// testInspecInfo.setInspectionInfoID(302);
-		// testInspecInfo.addNewInspection(302, "Skokie Location");
 		
-		// testInspecInfo.setInspectionInfoID(313);
-		// testInspecInfo.addNewInspection(313, "Evanston Location");
-
-		// testInspecInfo.listInspections();
+		System.out.println("Inspection ID#: " + testInspecInfo.getInspectionInfoID());
+		System.out.println("Facility name: " + testInspecInfo.getFacilityName());
+		
+		System.out.println();
+		
+		// Testing MaintenanceInfo
+		MaintenanceInfo testMaintInfo = (MaintenanceInfo) context.getBean("MaintenanceInfo");
+		
+		System.out.println("Facility ID#: " + testMaintInfo.getFacilityID());
+		System.out.println("Facility name: " + testMaintInfo.getFacilityName());
 	}
 
 }

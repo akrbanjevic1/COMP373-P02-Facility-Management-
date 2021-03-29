@@ -5,19 +5,28 @@ import java.util.HashMap;
 
 public class MaintenanceInfo {
     private int FacilityID;
+    private String FacilityName;
     private HashMap<Integer, Integer> MaintenanceRequestsList;
     private HashMap<Integer, String> MaintenanceDescList;
     private ArrayList<String> FacilityProblems;
 
+    /* OLD CODE
+    
     public MaintenanceInfo() {
-        // this.MaintenanceRequestsList = new HashMap<>();
-        // this.MaintenanceDescList = new HashMap<>();
-        // this.FacilityProblems = new ArrayList<>(); OLD CODE
+        this.MaintenanceRequestsList = new HashMap<>();
+        this.MaintenanceDescList = new HashMap<>();
+        this.FacilityProblems = new ArrayList<>();
     }
+    
+    */
 
     public void setFacilityID(int ID) { this.FacilityID = ID; }
+    
+    public void setFacilityName(String name) { this.FacilityName = name; }
 
     public int getFacilityID() { return this.FacilityID; }
+    
+    public String getFacilityName() { return this.FacilityName; }
 
     public void makeFacilityMaintRequest(int FacilityID, int RequestID, String description) {
         setFacilityID(FacilityID);
