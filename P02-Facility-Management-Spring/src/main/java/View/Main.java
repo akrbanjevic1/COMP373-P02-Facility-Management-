@@ -97,25 +97,27 @@ public class Main {
 		DamageCharge testDamageCharge = (DamageCharge) context.getBean("DamageCharge");
 		testDamageCharge.getCosts();
 
-		System.out.println("-----------------------------------------Testing of Maintenance package starts here---------------------------------------");
+		System.out.println("-----------------------------------------Testing of Maintenance starts here---------------------------------------");
 
 		// Testing maintenance related requests
-		MaintenanceReq testMaintReq = new MaintenanceReq();
+		// MaintenanceReq testMaintReq = new MaintenanceReq();
 
-		testMaintReq.scheduleMaintenance(1, "04/21/2021", "Fixing broken smoke detectors.");
-		testMaintReq.calcMaintenanceCost(2.3);
-		testMaintReq.performMaintenance(1);
+		// testMaintReq.scheduleMaintenance(1, "04/21/2021", "Fixing broken smoke detectors.");
+		// testMaintReq.calcMaintenanceCost(2.3);
+		// testMaintReq.performMaintenance(1);
 
 		// Testing inspection related requests
-		InspectionInfo testInspecInfo = new InspectionInfo();
-
-		testInspecInfo.setInspectionInfoID(302);
-		testInspecInfo.addNewInspection(302, "Skokie Location");
+		// InspectionInfo testInspecInfo = new InspectionInfo();
 		
-		testInspecInfo.setInspectionInfoID(313);
-		testInspecInfo.addNewInspection(313, "Evanston Location");
+		InspectionInfo testInspecInfo = (InspectionInfo) context.getBean("InspectionInfo");
 
-		testInspecInfo.listInspections();
+		// testInspecInfo.setInspectionInfoID(302);
+		// testInspecInfo.addNewInspection(302, "Skokie Location");
+		
+		// testInspecInfo.setInspectionInfoID(313);
+		// testInspecInfo.addNewInspection(313, "Evanston Location");
+
+		// testInspecInfo.listInspections();
 	}
 
 }

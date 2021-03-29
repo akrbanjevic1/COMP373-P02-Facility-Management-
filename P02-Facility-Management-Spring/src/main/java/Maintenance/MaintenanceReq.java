@@ -2,8 +2,8 @@ package Maintenance;
 
 public class MaintenanceReq {
     private int RequestID;
-    Double MAINTENANCE_COST = 50.25; // Rate per hour for maintenance work done // TODO: This needs to be reflected on the UML
-    private Double hoursWorked; // Total hours worked per maintenance request // TODO: This needs to be reflected on the UML
+    Double MAINTENANCE_COST = 50.25; // Rate per hour for maintenance work done
+    private Double hoursWorked; // Total hours worked per maintenance request
 
     public void setRequestID(int ID) { this.RequestID = ID; }
 

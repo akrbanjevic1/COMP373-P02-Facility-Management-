@@ -4,20 +4,20 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MaintenanceInfo {
-    private int FacilityID; // TODO: This needs to be reflected on the UML
-    private HashMap<Integer, Integer> MaintenanceRequestsList; // TODO: This needs to be reflected on the UML
-    private HashMap<Integer, String> MaintenanceDescList; // TODO: This needs to be reflected on the UML
-    private ArrayList<String> FacilityProblems; // TODO: This needs to be reflected on the UML
+    private int FacilityID;
+    private HashMap<Integer, Integer> MaintenanceRequestsList;
+    private HashMap<Integer, String> MaintenanceDescList;
+    private ArrayList<String> FacilityProblems;
 
     public MaintenanceInfo() {
-        this.MaintenanceRequestsList = new HashMap<>();
-        this.MaintenanceDescList = new HashMap<>();
-        this.FacilityProblems = new ArrayList<>();
+        // this.MaintenanceRequestsList = new HashMap<>();
+        // this.MaintenanceDescList = new HashMap<>();
+        // this.FacilityProblems = new ArrayList<>(); OLD CODE
     }
 
-    public void setFacilityID(int ID) { this.FacilityID = ID; } // TODO: This needs to be reflected on the UML
+    public void setFacilityID(int ID) { this.FacilityID = ID; }
 
-    public int getFacilityID() { return this.FacilityID; } // TODO: This needs to be reflected on the UML
+    public int getFacilityID() { return this.FacilityID; }
 
     public void makeFacilityMaintRequest(int FacilityID, int RequestID, String description) {
         setFacilityID(FacilityID);
